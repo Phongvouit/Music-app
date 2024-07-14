@@ -17,7 +17,7 @@ interface HeaderProps {
 }
 
 const Header: React.FC<HeaderProps> = ({ children, className }) => {
-  const { onOpen } = useAuthModal();
+  const authModal = useAuthModal();
   const router = useRouter();
 
   const supabaseClient = useSupabaseClient();
@@ -149,7 +149,7 @@ const Header: React.FC<HeaderProps> = ({ children, className }) => {
             <>
               <div>
                 <Button
-                  onClick={onOpen}
+                  onClick={authModal.onOpen}
                   className="
               bg-transparent
               text-neutral-300
@@ -161,7 +161,7 @@ const Header: React.FC<HeaderProps> = ({ children, className }) => {
               </div>
               <div>
                 <Button
-                  onClick={onOpen}
+                  onClick={authModal.onOpen}
                   className="
               bg-white
               px-6
