@@ -6,6 +6,7 @@ import SidebarItem from "./SidebarItem";
 import { HiHome } from "react-icons/hi";
 import { usePathname } from "next/navigation";
 import { BiSearch } from "react-icons/bi";
+import { IoLibrary } from "react-icons/io5";
 import Library from "./Library";
 import { Song } from "@/types";
 
@@ -22,7 +23,7 @@ const Sidebar: React.FC<SidebarProps> = ({ children, songs }) => {
       {
         icon: HiHome,
         label: "Home",
-        active: pathname !== "/search",
+        active: pathname === "/",
         href: "/",
       },
       {
@@ -31,6 +32,12 @@ const Sidebar: React.FC<SidebarProps> = ({ children, songs }) => {
         active: pathname === "/search",
         href: "/search",
       },
+      {
+        icon: IoLibrary,
+        label: "Liked Songs",
+        active: pathname === "/liked",
+        href: "/liked",
+      }
     ],
     [pathname]
   );
