@@ -11,6 +11,7 @@ const MediaItem: React.FC<MediaItemProps> = ({ data, onClick }) => {
   const imageUrl = useLoadImage(data);
   return (
     <div
+    onClick={() => onClick?.(data.id)}
       className="
     flex
     items-center

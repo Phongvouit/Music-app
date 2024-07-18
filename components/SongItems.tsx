@@ -61,11 +61,11 @@ const SongItems: React.FC<SongItemsProps> = ({ data, onClick }) => {
         group-hover:opacity-100
         "
         >
-          <div 
-          className="
+          <div
+            className="
           "
           >
-            <PlayButton/>
+            <PlayButton />
           </div>
         </div>
       </div>
